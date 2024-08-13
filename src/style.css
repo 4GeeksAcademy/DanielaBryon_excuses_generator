@@ -1,1 +1,37 @@
-@import "~bootstrap/dist/css/bootstrap.min.css";
+body {
+  background-color: #05033c;
+  padding-top: 50px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20px;
+}
+.form-select {
+  width: 32%;
+  margin: 30px;
+}
+img {
+  margin: 30px;
+  width: 500px;
+}
+h1 {
+  margin: 5px 24px 32px 25px;
+  font-size: 35px;
+  font-family: "Press Start 2P";
+  color: white;
+}
+p {
+  font-family: "Lato", sans-serif;
+  font-size: 20px;
+  color: white;
+}
+.d-grid {
+  width: 29%;
+}
+button {
+  background-image: linear-gradient(to right, #ba14f4, #147bf4);
+}
