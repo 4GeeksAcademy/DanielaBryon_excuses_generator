@@ -18,31 +18,97 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   </head>
   <body>
-    <div class="container">
+    <div class="container col-12">
       <h1 class="titulo">
         <strong>
-          Conoce a tu generador de excusas
+          Welcome to your excuse generator
         </strong>
       </h1>
-      <p>Te presento a Eddie el que te libratá de esa cena con la suegra</p>
+
+      <h4>
+        Meet Eddie who will get you out of that dinner with the mother-in-law.
+      </h4>
       <img src="img3.png" alt="imagen_generador_excusa" />
+
       <select
         class="form-select rounded-pill"
         aria-label="Default select example"
       >
-        <option selected>Necesito una excusa para: </option>
-        <option value="1">No quiero ir a trabajar</option>
-        <option value="2">Cena con los suegros</option>
-        <option value="3">Cita romántica con tu pareja</option>
+        <option selected>I need an excuse for: </option>
+        <option value="1">I don't want to go to work</option>
+        <option value="2">Dinner with parents-in-law</option>
+        <option value="3">Romantic date with your partner</option>
       </select>
     </div>
-    <div class="d-grid gap-2 mx-auto">
-      <button class="btn btn-primary rounded-pill" type="button">
-        <strong> Generar excusa </strong>
+    <div class="container">
+      <p id="excuse"></p>
+      <button id="generateBtn" class="btn btn-primary rounded-pill">
+        Generate Excuse
       </button>
-      <button class="btn btn-primary rounded-pill" type="button">
-        <strong>Salir del generador</strong>
-      </button>
+    
+      <!-- Button trigger modal -->
+      <button id="exitbutton"
+      type="button"
+      class="btn btn-primary rounded-pill"
+      data-bs-toggle="modal"
+      data-bs-target="#staticBackdrop"
+    >
+    Exit the generator
+    </button>
+
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="staticBackdrop"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+
+      <div class="modal-dialog">
+
+        <div class="modal-content">
+
+          <div class="modal-header">
+            <h2 class="modal-title fs-5 text-dark" id="staticBackdropLabel">
+              Are you sure you want to leave the generator?
+            </h2>
+
+
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+
+
+          </div>
+
+
+          <div class="modal-body">
+            <img src="img.png" alt="">
+
+            <h4 class="modal-title fs-5 text-dark" id="staticBackdropLabel">
+              Are you sure you want to leave the generator?
+            </h4>
+            <h6>If you close, there is a 99% chance that you will do something you don't want to do.</h6>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+            Continue with Eddie
+            </button>
+            <a href="https://4geeks.com/es" class="btn btn-primary">Exit the generator</a>         
+          </div>
+        </div>
+      </div>
     </div>
     <script src="app.js"></script>
     <script
