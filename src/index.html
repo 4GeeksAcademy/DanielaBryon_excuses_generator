@@ -33,13 +33,15 @@
       <select
         class="form-select rounded-pill"
         aria-label="Default select example"
+        id="excuseSelect"
       >
-        <option selected>I need an excuse for: </option>
+        <option selected>I need an excuse for </option>
         <option value="1">I don't want to go to work</option>
         <option value="2">Dinner with parents-in-law</option>
         <option value="3">Romantic date with your partner</option>
       </select>
     </div>
+    <div id="excuseOutput"></div>
     <div class="container">
       <p id="excuse"></p>
       <button id="generateBtn" class="btn btn-primary rounded-pill">
@@ -48,14 +50,9 @@
     
       <!-- Button trigger modal -->
       <button id="exitbutton"
-      type="button"
-      class="btn btn-primary rounded-pill"
-      data-bs-toggle="modal"
+      type="button" class="btn btn-unline-light" data-bs-toggle="modal"
       data-bs-target="#staticBackdrop"
-    >
-    Exit the generator
-    </button>
-
+      >Exit the generator</button>
 
     <!-- Modal -->
     <div
