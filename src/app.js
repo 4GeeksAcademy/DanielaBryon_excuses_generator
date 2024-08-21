@@ -14,14 +14,40 @@ let when = [
   "while I was praying"
 ];
 
-function generarExcusa() {
-  let randomWho = who[Math.floor(Math.random() * who.length)];
-  let randomAction = action[Math.floor(Math.random() * action.length)];
-  let randomWhat = what[Math.floor(Math.random() * what.length)];
-  let randomWhen = when[Math.floor(Math.random() * when.length)];
+function generateExcuse() {
+  let excuse = "";
 
-  let excuse = `${randomWho} ${randomAction} ${randomWhat} ${randomWhen}.`;
+  const selectedOption = document.getElementById("excuseSelect").value;
+
+  switch (selectedOption) {
+    case "1":
+      excuse = `${who[Math.floor(Math.random() * who.length)]} ${
+        action[Math.floor(Math.random() * action.length)]
+      } ${what[Math.floor(Math.random() * what.length)]} ${
+        when[Math.floor(Math.random() * when.length)]
+      }.`;
+      break;
+    case "2":
+      excuse = `${who[Math.floor(Math.random() * who.length)]} ${
+        action[Math.floor(Math.random() * action.length)]
+      } ${what[Math.floor(Math.random() * what.length)]} ${
+        when[Math.floor(Math.random() * when.length)]
+      }.`;
+      break;
+    case "3":
+      excuse = `${who[Math.floor(Math.random() * who.length)]} ${
+        action[Math.floor(Math.random() * action.length)]
+      } ${what[Math.floor(Math.random() * what.length)]} ${
+        when[Math.floor(Math.random() * when.length)]
+      }.`;
+      break;
+    default:
+      excuse = "Please select a valid excuse option.";
+  }
+
   document.getElementById("excuse").innerHTML = excuse;
 }
 
-document.getElementById("generateBtn").addEventListener("click", generarExcusa);
+document
+  .getElementById("generateBtn")
+  .addEventListener("click", generateExcuse);

@@ -11,7 +11,7 @@ body {
   margin-top: 20px;
 }
 .form-select {
-  width: 28%;
+  width: 32%;
   margin: 14px;
 }
 img {
@@ -36,8 +36,11 @@ h4 {
 .d-grid {
   width: 29%;
 }
-button {
-  width: 300px;
+.btn-primary {
+  width: 32%;
   background-image: linear-gradient(to right, #ba14f4, #147bf4);
   margin: 8px;
+}
+.btn-unline-light {
+  color: white;
 }
